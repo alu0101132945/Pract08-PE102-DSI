@@ -8,6 +8,15 @@ export class Mergesort implements Strategy {
      */
     
     execute(data:number[]):number[]{
+        return this.mergeSort(data);
+    }
+
+    /**
+     * metodo que hace el mergesort sobre un array
+     * @param data array desordenado
+     * @returns array ordenado
+     */
+    mergeSort(data:number[]):number[]{
         if (data.length <= 1) {
             return data;
         }
