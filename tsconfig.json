@@ -11,6 +11,14 @@
 		"declaration": true,
 		"outDir": "./dist",
 		"strict": true,
+	},
+	"typedocOptions":{
+		"entryPoints": [
+			"./src/mergesort/mergesort.ts",
+			"./src/bubblesort/bubblesort.ts",
+			"./src/sort/sort.ts",
+		],
+		"out": "./docs"
 	}
 }
 

@@ -19,7 +19,7 @@ describe('Sort methods tests', () => {
             expect(mySort.getSortStrategy()).to.deep.equal(merg);
         });
     })
-    context('Bubblesort methods tests', () =>{
+    context('Mergesort methods tests', () =>{
         const mySort = new Sort([6,2,8,5,1,3],new Mergesort);
         const mySort2 = new Sort([10,2,120,46,31,660],new Mergesort);
         it('logic tests', () => {
