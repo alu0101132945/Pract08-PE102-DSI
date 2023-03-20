@@ -1,21 +1,11 @@
-export interface Strategy {
-    execute(data: number[]): void;
-}
-
-export class Sort {
-    constructor(private unsortArray: number[], private sortStrategy: Strategy){}
-
-    setSortStrategy(strategy: Strategy) {
-        this.sortStrategy = strategy;
-    }
-
-    logic() {
-        this.sortStrategy.execute(this.unsortArray);
-    }
-}
-
+import { Strategy } from "../sort/sort";
 export class Bubblesort implements Strategy{
-    execute(data: number[]): void {
+    /**
+     * implementacion de execute para el bubblesort
+     * @param data array de numeros desordenados
+     * @returns array de numeros ordenados
+     */
+    execute(data: number[]): number[] {
         let n:number = data.length;
         let swapped:boolean;
         do{
@@ -30,6 +20,7 @@ export class Bubblesort implements Strategy{
                 }
             }
             n-=1
-        }while(!swapped)
-    }
+        }while(swapped)
+        return data;
+    }    
 }
